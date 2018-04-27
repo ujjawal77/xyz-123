@@ -1,11 +1,11 @@
 export const TEAMS: any =
   [
     {
-      id : "1",
-      name: "Argentina",
-      logo : "assets/imgs/teams/argentina.png",
-      group : "D",
-      players : [
+      id: '1',
+      name: 'Argentina',
+      logo: 'assets/imgs/teams/argentina.png',
+      group: 'D',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -20,11 +20,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "2",
-      name: "Australia",
-      logo : "assets/imgs/teams/australia.png",
-      group : "C",
-      players : [
+      id: '2',
+      name: 'Australia',
+      logo: 'assets/imgs/teams/australia.png',
+      group: 'C',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -39,11 +39,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "3",
-      name: "Belgium",
-      logo : "assets/imgs/teams/belgium.png",
-      group : "G",
-      players : [
+      id: '3',
+      name: 'Belgium',
+      logo: 'assets/imgs/teams/belgium.png',
+      group: 'G',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -58,11 +58,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "4",
-      name: "Brazil",
-      logo : "assets/imgs/teams/brazil.png",
-      group : "E",
-      players : [
+      id: '4',
+      name: 'Brazil',
+      logo: 'assets/imgs/teams/brazil.png',
+      group: 'E',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -77,11 +77,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "5",
-      name: "Colombia",
-      logo : "assets/imgs/teams/colombia.png",
-      group : "H",
-      players : [
+      id: '5',
+      name: 'Colombia',
+      logo: 'assets/imgs/teams/colombia.png',
+      group: 'H',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -96,11 +96,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "6",
-      name: "Costa Rica",
-      logo : "assets/imgs/teams/costa-rica.png",
-      group : "E",
-      players : [
+      id: '6',
+      name: 'Costa Rica',
+      logo: 'assets/imgs/teams/costa-rica.png',
+      group: 'E',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -115,11 +115,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "7",
-      name: "Croatia",
-      logo : "assets/imgs/teams/croatia.png",
-      group : "D",
-      players : [
+      id: '7',
+      name: 'Croatia',
+      logo: 'assets/imgs/teams/croatia.png',
+      group: 'D',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -134,11 +134,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "8",
-      name: "Denmark",
-      logo : "assets/imgs/teams/denmark.png",
-      group : "C",
-      players : [
+      id: '8',
+      name: 'Denmark',
+      logo: 'assets/imgs/teams/denmark.png',
+      group: 'C',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -153,11 +153,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "9",
-      name: "Egypt",
-      logo : "assets/imgs/teams/egypt.png",
-      group : "A",
-      players : [
+      id: '9',
+      name: 'Egypt',
+      logo: 'assets/imgs/teams/egypt.png',
+      group: 'A',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -172,11 +172,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "10",
-      name: "England",
-      logo : "assets/imgs/teams/england.png",
-      group : "G",
-      players : [
+      id: '10',
+      name: 'England',
+      logo: 'assets/imgs/teams/england.png',
+      group: 'G',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -191,11 +191,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "11",
-      name: "France",
-      logo : "assets/imgs/teams/france.png",
-      group : "C",
-      players : [
+      id: '11',
+      name: 'France',
+      logo: 'assets/imgs/teams/france.png',
+      group: 'C',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -210,11 +210,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "12",
-      name: "Germany",
-      logo : "assets/imgs/teams/germany.png",
-      group : "F",
-      players : [
+      id: '12',
+      name: 'Germany',
+      logo: 'assets/imgs/teams/germany.png',
+      group: 'F',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -229,11 +229,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "13",
-      name: "Iceland",
-      logo : "assets/imgs/teams/iceland.png",
-      group : "D",
-      players : [
+      id: '13',
+      name: 'Iceland',
+      logo: 'assets/imgs/teams/iceland.png',
+      group: 'D',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -248,11 +248,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "14",
-      name: "Iran",
-      logo : "assets/imgs/teams/iran.png",
-      group : "B",
-      players : [
+      id: '14',
+      name: 'Iran',
+      logo: 'assets/imgs/teams/iran.png',
+      group: 'B',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -267,11 +267,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "15",
-      name: "Japan",
-      logo : "assets/imgs/teams/japan.png",
-      group : "H",
-      players : [
+      id: '15',
+      name: 'Japan',
+      logo: 'assets/imgs/teams/japan.png',
+      group: 'H',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -286,11 +286,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "16",
-      name: "Korea Republic",
-      logo : "assets/imgs/teams/south-korea.png",
-      group : "F",
-      players : [
+      id: '16',
+      name: 'Korea Republic',
+      logo: 'assets/imgs/teams/south-korea.png',
+      group: 'F',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -305,11 +305,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "17",
-      name: "Mexico",
-      logo : "assets/imgs/teams/mexico.png",
-      group : "F",
-      players : [
+      id: '17',
+      name: 'Mexico',
+      logo: 'assets/imgs/teams/mexico.png',
+      group: 'F',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -324,11 +324,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "18",
-      name: "Morocco",
-      logo : "assets/imgs/teams/morocco.png",
-      group : "B",
-      players : [
+      id: '18',
+      name: 'Morocco',
+      logo: 'assets/imgs/teams/morocco.png',
+      group: 'B',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -343,11 +343,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "19",
-      name: "Nigeria",
-      logo : "assets/imgs/teams/nigeria.png",
-      group : "D",
-      players : [
+      id: '19',
+      name: 'Nigeria',
+      logo: 'assets/imgs/teams/nigeria.png',
+      group: 'D',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -362,11 +362,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "20",
-      name: "Panama",
-      logo : "assets/imgs/teams/panama.png",
-      group : "G",
-      players : [
+      id: '20',
+      name: 'Panama',
+      logo: 'assets/imgs/teams/panama.png',
+      group: 'G',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -381,11 +381,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "21",
-      name: "Portugal",
-      logo : "assets/imgs/teams/portugal.png",
-      group : "B",
-      players : [
+      id: '21',
+      name: 'Portugal',
+      logo: 'assets/imgs/teams/portugal.png',
+      group: 'B',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -400,11 +400,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "22",
-      name: "Peru",
-      logo : "assets/imgs/teams/peru.png",
-      group : "C",
-      players : [
+      id: '22',
+      name: 'Peru',
+      logo: 'assets/imgs/teams/peru.png',
+      group: 'C',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -419,11 +419,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "23",
-      name: "Poland",
-      logo : "assets/imgs/teams/poland.png",
-      group : "H",
-      players : [
+      id: '23',
+      name: 'Poland',
+      logo: 'assets/imgs/teams/poland.png',
+      group: 'H',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -438,11 +438,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "24",
-      name: "Russia",
-      logo : "assets/imgs/teams/russia.png",
-      group : "A",
-      players : [
+      id: '24',
+      name: 'Russia',
+      logo: 'assets/imgs/teams/russia.png',
+      group: 'A',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -457,11 +457,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "25",
-      name: "Saudi Arabia",
-      logo : "assets/imgs/teams/saudi-arabia.png",
-      group : "A",
-      players : [
+      id: '25',
+      name: 'Saudi Arabia',
+      logo: 'assets/imgs/teams/saudi-arabia.png',
+      group: 'A',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -476,11 +476,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "26",
-      name: "Senegal",
-      logo : "assets/imgs/teams/senegal.png",
-      group : "H",
-      players : [
+      id: '26',
+      name: 'Senegal',
+      logo: 'assets/imgs/teams/senegal.png',
+      group: 'H',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -495,11 +495,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "27",
-      name: "Serbia",
-      logo : "assets/imgs/teams/serbia.png",
-      group : "E",
-      players : [
+      id: '27',
+      name: 'Serbia',
+      logo: 'assets/imgs/teams/serbia.png',
+      group: 'E',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -514,11 +514,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "28",
-      name: "Spain",
-      logo : "assets/imgs/teams/spain.png",
-      group : "B",
-      players : [
+      id: '28',
+      name: 'Spain',
+      logo: 'assets/imgs/teams/spain.png',
+      group: 'B',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -533,11 +533,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "29",
-      name: "Sweden",
-      logo : "assets/imgs/teams/sweden.png",
-      group : "F",
-      players : [
+      id: '29',
+      name: 'Sweden',
+      logo: 'assets/imgs/teams/sweden.png',
+      group: 'F',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -552,11 +552,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "30",
-      name: "Switzerland",
-      logo : "assets/imgs/teams/switzerland.png",
-      group : "E",
-      players : [
+      id: '30',
+      name: 'Switzerland',
+      logo: 'assets/imgs/teams/switzerland.png',
+      group: 'E',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -571,11 +571,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "31",
-      name: "Tunisia",
-      logo : "assets/imgs/teams/tunisia.png",
-      group : "G",
-      players : [
+      id: '31',
+      name: 'Tunisia',
+      logo: 'assets/imgs/teams/tunisia.png',
+      group: 'G',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
@@ -590,11 +590,11 @@ export const TEAMS: any =
       ]
     },
     {
-      id : "32",
-      name: "Uruguay",
-      logo : "assets/imgs/teams/uruguay.png",
-      group : "A",
-      players : [
+      id: '32',
+      name: 'Uruguay',
+      logo: 'assets/imgs/teams/uruguay.png',
+      group: 'A',
+      players: [
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
         {name : 'Player Name yet to be announced'},
