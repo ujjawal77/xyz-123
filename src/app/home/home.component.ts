@@ -9,7 +9,7 @@ import {SCHEDULE} from '../providers/mock-schedule';
 export class HomeComponent implements OnInit {
 
   // schedule list
-  schedule: any = SCHEDULE;
+  schedules: any = SCHEDULE;
 
   constructor() { }
 
