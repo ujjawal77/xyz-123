@@ -1,3 +1,84 @@
-<p>
-  home works!
-</p>
+<mat-toolbar class="secondary">
+  <span>
+    <strong>Fifa Predictor</strong>
+  </span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+
+  <span class="time">
+    <strong>70 Days 10 Hours 35 Minutes</strong>
+  </span>
+</mat-toolbar>
+
+<mat-toolbar color="primary">
+  <button mat-button>
+    <strong>Teams</strong>
+  </button>
+
+  <button mat-button>
+    <strong>Schedule</strong>
+  </button>
+
+  <button mat-button>
+    <strong>Predictions</strong>
+  </button>
+</mat-toolbar>
+
+<div fxLayout="column" fxFlex="100%">
+  <mat-card class="schedule" *ngFor="let schedule of schedules" fxLayoutWrap  class="home-schedule-cards">
+    <mat-card-header>
+      <strong>
+        {{schedule.date}}
+      </strong>
+    </mat-card-header>
+    <mat-card-content>
+      <div fxLayout="row">
+        <div fxFlex="50%" fxLayout="row">
+          <div fxFlex="40%" class="team">
+            <img src="{{schedule.team1logo}}">
+            <p>{{schedule.team1}}</p>
+          </div>
+          <div fxFlex="20%" class="against">
+            VS
+          </div>
+          <div fxFlex="40%" class="team">
+            <img src="{{schedule.team2logo}}">
+            <p>{{schedule.team2}}</p>
+          </div>
+        </div>
+        <div fxFlex="50%" class="text-center">
+          <h1 class="teamName">{{schedule.name}}</h1>
+          <p>
+            <mat-radio-group fxLayout="column">
+              <mat-radio-button value="1" fxFlex="50%" class="radio">{{schedule.team1}}</mat-radio-button>
+              <mat-radio-button value="2" fxFlex="50%" class="radio">{{schedule.team2}}</mat-radio-button>
+            </mat-radio-group>
+          </p>
+        </div>
+      </div>
+      <div fxLayout="row">
+        <div fxFlex="50%" class="matchDetails">
+          <p>
+            <span><i class="fas fa-calendar-alt"></i></span>
+            <span>
+              <strong> {{schedule.countDown}}</strong>
+            </span>
+          </p>
+          <p>
+            <strong><i class="fas fa-map-marker"></i>
+              {{schedule.stadium}}</strong>
+          </p>
+          <p>
+            <strong>{{schedule.city}}</strong>
+          </p>
+        </div>
+        <div fxFlex="50%" class="text-center">
+          <h2>Vote for your team !!</h2>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
