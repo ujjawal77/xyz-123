@@ -1,0 +1,69 @@
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+  font-family: "dusha_plusregular";
+  font-size: 30px;
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row.secondary {
+  color: #3f51b5;
+  font-size: 30px;
+}
+
+.time {
+  font-size: 20px;
+}
+
+mat-card.schedule {
+  margin: 5px;
+}
+
+mat-card {
+  border-left: 5px solid blue;
+}
+
+mat-card-content {
+  margin: 20px;
+}
+
+mat-card-content p {
+  font-size: 15px!important;
+}
+mat-card img {
+  height: 124px;
+}
+
+.against {
+  font-size: 30px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.team {
+  text-align: center;
+}
+
+.matchDetails {
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.radio {
+  margin: 15px;
+}
+
+.matchDetails i {
+ color: green;
+}
+
+.teamName {
+  color: #3f51b5;
+}
