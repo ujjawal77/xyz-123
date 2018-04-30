@@ -11,12 +11,16 @@ import {RoutingModule} from './routing/routing.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { TeamsAndPlayersComponent } from './teams-and-players/teams-and-players.component';
+import { VenuesComponent } from './venues/venues.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    TeamsAndPlayersComponent,
+    VenuesComponent
   ],
   imports: [
     BrowserModule,
