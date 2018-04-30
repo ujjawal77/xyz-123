@@ -12,16 +12,14 @@
 </mat-toolbar>
 
 <mat-toolbar color="primary">
-  <button mat-button>
-    <strong>Teams</strong>
-  </button>
-
-  <button mat-button>
+  <button mat-button [routerLink]="['/schedule']">
     <strong>Schedule</strong>
   </button>
-
-  <button mat-button>
-    <strong>Predictions</strong>
+  <button mat-button [routerLink]="['/teamsandplayers']">
+    <strong>Teams & Players</strong>
+  </button>
+  <button mat-button [routerLink]="['/venues']">
+    <strong>Venues</strong>
   </button>
 </mat-toolbar>
 
