@@ -1,1 +1,12 @@
-  <router-outlet></router-outlet>
+<mat-toolbar color="primary">
+  <button mat-button [routerLink]="['/schedule']">
+    <strong>Schedule</strong>
+  </button>
+  <button mat-button [routerLink]="['/teamsandplayers']">
+    <strong>Teams & Players</strong>
+  </button>
+  <button mat-button [routerLink]="['/venues']">
+    <strong>Venues</strong>
+  </button>
+</mat-toolbar>
+<router-outlet></router-outlet>

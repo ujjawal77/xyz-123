@@ -1,28 +1,3 @@
-<mat-toolbar class="secondary">
-  <span>
-    <strong>Fifa Predictor</strong>
-  </span>
-
-  <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
-
-  <span class="time">
-    <strong>70 Days 10 Hours 35 Minutes</strong>
-  </span>
-</mat-toolbar>
-
-<mat-toolbar color="primary">
-  <button mat-button [routerLink]="['/schedule']">
-    <strong>Schedule</strong>
-  </button>
-  <button mat-button [routerLink]="['/teamsandplayers']">
-    <strong>Teams & Players</strong>
-  </button>
-  <button mat-button [routerLink]="['/venues']">
-    <strong>Venues</strong>
-  </button>
-</mat-toolbar>
-
 <div fxLayout="column" fxFlex="100%">
   <mat-card class="schedule" *ngFor="let schedule of schedules" fxLayoutWrap  class="home-schedule-cards">
     <mat-card-header>
