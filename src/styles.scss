@@ -3,16 +3,24 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans:400,700');
 
+$full-background : #f7f7f7;
+
 body {
   margin: 0px!important;
   font-family: Roboto;
+  background-color: $full-background;
 }
 
 mat-card{
   box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
 }
 
-.home-schedule-cards{
+.main-content {
+  min-height: 100%;
   margin: 50px !important;
+}
+
+.home-schedule-cards{
+  margin-bottom: 30px;
   cursor: pointer;
 }
