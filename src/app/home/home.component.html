@@ -1,4 +1,22 @@
 <div fxLayout="column" fxFlex="100%">
+  <div fxLayout="row" class="options">
+    <mat-form-field fxFlex="10%">
+      <mat-select placeholder="Venue">
+        <mat-option>
+          Demo Venue
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field fxFlex="10%">
+      <mat-select placeholder="Venue">
+        <mat-option>
+          Demo Venue
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
   <mat-card class="schedule" *ngFor="let schedule of schedules" fxLayoutWrap  class="home-schedule-cards">
     <mat-card-header>
       <strong>
@@ -6,7 +24,7 @@
       </strong>
     </mat-card-header>
     <mat-card-content>
-      <div fxLayout="row">
+      <div fxLayout="row" fxLayout-xs="column">
         <div fxFlex="50%" fxLayout="row">
           <div fxFlex="40%" class="team">
             <img src="{{schedule.team1logo}}">

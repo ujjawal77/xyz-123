@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TEAMS} from "../providers/mock-teams";
 
 @Component({
   selector: 'app-teams-and-players',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./teams-and-players.component.css']
 })
 export class TeamsAndPlayersComponent implements OnInit {
+
+  teamsAndPlayerList: any = TEAMS;
 
   constructor() { }
 
