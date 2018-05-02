@@ -1,23 +1,24 @@
-<mat-expansion-panel *ngFor="let team of teamsAndPlayerList">
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      <img mat-card-avatar src="{{team.logo}}">
-      <h3>
-        <strong>{{team.name}}</strong>
-      </h3>
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  <div fxLayout="row wrap">
-    <mat-card fxFlex="18%" class="player" *ngFor="let player of team.players">
-      <mat-card-content fxLayout="row">
-        <div fxFlex="25%">
-          <img src="../../assets/imgs/player_avatar.png" class="player">
-        </div>
-        <div fxFlex="75%">
-          <h3>{{player.name}}</h3>
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </div>
-
-</mat-expansion-panel>
+<div *ngFor="let team of teamsAndPlayerList; let i = index">
+  <mat-expansion-panel *ngIf="i!=0">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <img mat-card-avatar src="{{team.logo}}">
+        <h3>
+          <strong>{{team.name}}</strong>
+        </h3>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div fxLayout="row wrap">
+      <mat-card fxFlex="18%" class="player" *ngFor="let player of team.players">
+        <mat-card-content fxLayout="row">
+          <div fxFlex="25%">
+            <img src="../../assets/imgs/player_avatar.png" class="player">
+          </div>
+          <div fxFlex="75%">
+            <h3>{{player.name}}</h3>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-expansion-panel>
+</div>
