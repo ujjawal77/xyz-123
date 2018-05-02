@@ -1,75 +1,80 @@
 <div fxLayout="column" fxFlex="100%">
-  <div fxLayout="row" class="options">
-    <mat-form-field fxFlex="10%">
-      <mat-select placeholder="Venue">
-        <mat-option>
-          Demo Venue
+  <div fxLayout="row" class="options" fxFlexAlign="center">
+    <mat-form-field fxFlex="50%">
+      <mat-select placeholder="Team" [(ngModel)]="selectedTeam" (change)="onTeamSelect()">
+        <mat-option *ngFor="let team of teams" [value]="team">
+          {{team.name}}
         </mat-option>
       </mat-select>
     </mat-form-field>
 
-    <mat-form-field fxFlex="10%">
-      <mat-select placeholder="Venue">
-        <mat-option>
-          Demo Venue
+    <mat-form-field fxFlex="50%">
+      <mat-select placeholder="Venue" [(ngModel)]="selectedVenue" (change)="onVenueSelect()">
+        <mat-option *ngFor="let venue of venues" [value]="venue">
+          {{venue.name}}
         </mat-option>
       </mat-select>
     </mat-form-field>
   </div>
 
-  <mat-card class="schedule" *ngFor="let schedule of schedules" fxLayoutWrap  class="home-schedule-cards">
-    <mat-card-header>
-      <strong>
-        {{schedule.date}}
-      </strong>
-    </mat-card-header>
-    <mat-card-content>
-      <div fxLayout="row" fxLayout-xs="column">
-        <div fxFlex="50%" fxLayout="row">
-          <div fxFlex="40%" class="team">
-            <img src="{{schedule.team1logo}}">
-            <p>{{schedule.team1}}</p>
+  <div *ngIf="filteredFixtureList.length">
+    <mat-card class="fixture" *ngFor="let fixture of filteredFixtureList" fxLayoutWrap  class="home-fixture-cards">
+      <mat-card-header>
+        <strong>
+          {{fixture.date}}
+        </strong>
+      </mat-card-header>
+      <mat-card-content>
+        <div fxLayout="row" fxLayout-xs="column">
+          <div fxFlex="50%" fxLayout="row">
+            <div fxFlex="40%" class="team">
+              <img src="{{fixture.team1logo}}">
+              <p>{{fixture.team1}}</p>
+            </div>
+            <div fxFlex="20%" class="against">
+              VS
+            </div>
+            <div fxFlex="40%" class="team">
+              <img src="{{fixture.team2logo}}">
+              <p>{{fixture.team2}}</p>
+            </div>
           </div>
-          <div fxFlex="20%" class="against">
-            VS
-          </div>
-          <div fxFlex="40%" class="team">
-            <img src="{{schedule.team2logo}}">
-            <p>{{schedule.team2}}</p>
+          <div fxFlex="50%" class="text-center">
+            <h1 class="teamName">{{fixture.name}}</h1>
+            <p>
+              <mat-radio-group fxLayout="column">
+                <mat-radio-button value="1" fxFlex="50%" class="radio">{{fixture.team1}}</mat-radio-button>
+                <mat-radio-button value="2" fxFlex="50%" class="radio">{{fixture.team2}}</mat-radio-button>
+              </mat-radio-group>
+            </p>
           </div>
         </div>
-        <div fxFlex="50%" class="text-center">
-          <h1 class="teamName">{{schedule.name}}</h1>
-          <p>
-            <mat-radio-group fxLayout="column">
-              <mat-radio-button value="1" fxFlex="50%" class="radio">{{schedule.team1}}</mat-radio-button>
-              <mat-radio-button value="2" fxFlex="50%" class="radio">{{schedule.team2}}</mat-radio-button>
-            </mat-radio-group>
-          </p>
-        </div>
-      </div>
-      <div fxLayout="row">
-        <div fxFlex="50%" class="matchDetails">
-          <p>
-            <span><i class="fas fa-calendar-alt"></i></span>
-            <span>
-              <strong> {{schedule.countDown}}</strong>
+        <div fxLayout="row">
+          <div fxFlex="50%" class="matchDetails">
+            <p>
+              <span><i class="fas fa-calendar-alt"></i></span>
+              <span>
+              <strong> {{fixture.countDown}}</strong>
             </span>
-          </p>
-          <p>
-            <strong><i class="fas fa-map-marker"></i>
-              {{schedule.stadium}}</strong>
-          </p>
-          <p>
-            <strong>{{schedule.city}}</strong>
-          </p>
+            </p>
+            <p>
+              <strong><i class="fas fa-map-marker"></i>
+                {{fixture.stadium}}</strong>
+            </p>
+            <p>
+              <strong>{{fixture.city}}</strong>
+            </p>
+          </div>
+          <div fxFlex="50%" class="text-center">
+            <h2>Vote for your team !!</h2>
+          </div>
         </div>
-        <div fxFlex="50%" class="text-center">
-          <h2>Vote for your team !!</h2>
-        </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div *ngIf="!filteredFixtureList.length" class="text-center">
+    <span>No fixture for the selected filters</span>
+  </div>
 </div>
 
 
