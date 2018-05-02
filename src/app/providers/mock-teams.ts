@@ -1,6 +1,10 @@
 export const TEAMS: any =
   [
     {
+      id: '0',
+      name: 'All Teams',
+    },
+    {
       id: '1',
       name: 'Argentina',
       logo: 'assets/imgs/teams/argentina.png',
