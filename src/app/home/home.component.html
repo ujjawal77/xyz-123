@@ -1,6 +1,6 @@
 <div fxLayout="column" fxFlex="100%">
   <div fxLayout="row" fxLayout.xs="column" class="options" fxFlexAlign="center">
-    <mat-card fxFlex="50%" class="options">
+    <mat-card fxFlex="50%" class="options shadow-effect">
       <mat-form-field>
         <mat-select placeholder="Team" [(ngModel)]="selectedTeam" (change)="onTeamSelect()">
           <mat-option *ngFor="let team of teams" [value]="team">
@@ -10,7 +10,7 @@
       </mat-form-field>
     </mat-card>
 
-    <mat-card fxFlex="50%" class="options">
+    <mat-card fxFlex="50%" class="options shadow-effect">
       <mat-form-field>
         <mat-select placeholder="Venue" [(ngModel)]="selectedVenue" (change)="onVenueSelect()">
           <mat-option *ngFor="let venue of venues" [value]="venue">
@@ -28,7 +28,7 @@
         {{fixture.name}}, {{fixture.date}}
       </strong>
     </h2>
-    <mat-card class="fixture"  class="home-fixture-cards">
+    <mat-card class="fixture"  class="home-fixture-cards shadow-effect">
       <mat-card-content>
         <div fxLayout="row" fxLayout.xs="column">
           <div fxFlex="30%" fxLayout="row">
