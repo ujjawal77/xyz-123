@@ -11,10 +11,6 @@ body {
   background-color: $full-background;
 }
 
-mat-card.schedule {
-  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
-}
-
 .main-content {
   min-height: 100%;
   margin: 50px !important;
@@ -23,4 +19,8 @@ mat-card.schedule {
 .home-fixture-cards{
   margin-bottom: 50px !important;
   cursor: pointer;
+}
+
+.shadow-effect {
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
 }
