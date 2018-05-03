@@ -9,14 +9,10 @@
       </mat-panel-title>
     </mat-expansion-panel-header>
     <div fxLayout="row wrap">
-      <mat-card fxFlex="18%" class="player" *ngFor="let player of team.players">
+      <mat-card fxFlex="18%" fxFlex.sm="30%" fxFlex.md="22%" fxFlex.xs="100%" class="player" *ngFor="let player of team.players">
         <mat-card-content fxLayout="row">
-          <div fxFlex="25%">
             <img src="../../assets/imgs/player_avatar.png" class="player">
-          </div>
-          <div fxFlex="75%">
             <h3>{{player.name}}</h3>
-          </div>
         </mat-card-content>
       </mat-card>
     </div>
