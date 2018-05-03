@@ -1,32 +1,37 @@
 <div fxLayout="column" fxFlex="100%">
-  <div fxLayout="row" class="options" fxFlexAlign="center">
-    <mat-form-field fxFlex="50%">
-      <mat-select placeholder="Team" [(ngModel)]="selectedTeam" (change)="onTeamSelect()">
-        <mat-option *ngFor="let team of teams" [value]="team">
-          {{team.name}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+  <div fxLayout="row" fxLayout.xs="column" class="options" fxFlexAlign="center">
+    <mat-card fxFlex="50%" class="options">
+      <mat-form-field>
+        <mat-select placeholder="Team" [(ngModel)]="selectedTeam" (change)="onTeamSelect()">
+          <mat-option *ngFor="let team of teams" [value]="team">
+            {{team.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card>
 
-    <mat-form-field fxFlex="50%">
-      <mat-select placeholder="Venue" [(ngModel)]="selectedVenue" (change)="onVenueSelect()">
-        <mat-option *ngFor="let venue of venues" [value]="venue">
-          {{venue.name}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+    <mat-card fxFlex="50%" class="options">
+      <mat-form-field>
+        <mat-select placeholder="Venue" [(ngModel)]="selectedVenue" (change)="onVenueSelect()">
+          <mat-option *ngFor="let venue of venues" [value]="venue">
+            {{venue.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card>
   </div>
 
   <div *ngIf="filteredFixtureList.length">
-    <mat-card class="fixture" *ngFor="let fixture of filteredFixtureList" fxLayoutWrap  class="home-fixture-cards">
-      <mat-card-header>
-        <strong>
-          {{fixture.date}}
-        </strong>
-      </mat-card-header>
+    <div *ngFor="let fixture of filteredFixtureList">
+    <h2 class="header">
+      <strong>
+        {{fixture.name}}, {{fixture.date}}
+      </strong>
+    </h2>
+    <mat-card class="fixture"  class="home-fixture-cards">
       <mat-card-content>
-        <div fxLayout="row" fxLayout-xs="column">
-          <div fxFlex="50%" fxLayout="row">
+        <div fxLayout="row" fxLayout.xs="column">
+          <div fxFlex="30%" fxLayout="row">
             <div fxFlex="40%" class="team">
               <img src="{{fixture.team1logo}}">
               <p>{{fixture.team1}}</p>
@@ -39,23 +44,9 @@
               <p>{{fixture.team2}}</p>
             </div>
           </div>
-          <div fxFlex="50%" class="text-center">
-            <h1 class="teamName">{{fixture.name}}</h1>
+          <div fxFlex="30%" class="text-center">
             <p>
-              <mat-radio-group fxLayout="column">
-                <mat-radio-button value="1" fxFlex="50%" class="radio">{{fixture.team1}}</mat-radio-button>
-                <mat-radio-button value="2" fxFlex="50%" class="radio">{{fixture.team2}}</mat-radio-button>
-              </mat-radio-group>
-            </p>
-          </div>
-        </div>
-        <div fxLayout="row">
-          <div fxFlex="50%" class="matchDetails">
-            <p>
-              <span><i class="fas fa-calendar-alt"></i></span>
-              <span>
-              <strong> {{fixture.countDown}}</strong>
-            </span>
+              <i class="fas fa-calendar-alt"></i> <strong> {{fixture.countDown}}</strong>
             </p>
             <p>
               <strong><i class="fas fa-map-marker"></i>
@@ -65,12 +56,27 @@
               <strong>{{fixture.city}}</strong>
             </p>
           </div>
-          <div fxFlex="50%" class="text-center">
-            <h2>Vote for your team !!</h2>
+          <div fxFlex="15%" fxFlexOffset="15%">
+            <div>
+              <mat-radio-group fxLayout="column">
+                <mat-radio-button value="1" fxFlex="50%" class="radio">{{fixture.team1}}</mat-radio-button>
+                <mat-radio-button value="2" fxFlex="50%" class="radio">{{fixture.team2}}</mat-radio-button>
+              </mat-radio-group>
+              <button mat-raised-button color="accent" style="margin-left: 15px;">
+                <strong>Vote Now</strong>
+              </button>
+            </div>
+            <div>
+              <!-- <p><strong>{{fixture.team1}} (40%)</strong></p>
+           <p><mat-progress-bar mode="determinate" value="40"></mat-progress-bar></p>
+           <p><strong>{{fixture.team2}} (60%)</strong></p>
+           <p><mat-progress-bar mode="determinate" value="60"></mat-progress-bar></p>-->
+            </div>
           </div>
         </div>
       </mat-card-content>
     </mat-card>
+    </div>
   </div>
   <div *ngIf="!filteredFixtureList.length" class="text-center">
     <span>No fixture for the selected filters</span>

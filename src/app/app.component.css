@@ -18,3 +18,21 @@ mat-toolbar-row, .mat-toolbar-single-row.secondary {
 .time {
   font-size: 20px;
 }
+
+.main-content {
+  margin: 35px!important;
+}
+
+@media only screen and (max-width: 600px) {
+  mat-toolbar-row, .mat-toolbar-single-row.secondary {
+    font-size: 20px;
+  }
+
+  .time {
+    font-size: 15px;
+  }
+}
+
+mat-toolbar button strong {
+  font-size:20px;
+}
