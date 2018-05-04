@@ -1,0 +1,18 @@
+.venue {
+  margin: 15px;
+  padding: 0px;
+}
+
+.venue:hover {
+  cursor:pointer;
+  transform : scale(1.03);
+  transition: 0.6s ease-out;
+}
+
+.venue mat-card-content {
+  padding: 0px;
+}
+
+.venue h2 {
+  text-align: center!important;
+}

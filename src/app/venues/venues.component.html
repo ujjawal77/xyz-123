@@ -1,3 +1,10 @@
-<p>
-  venues works!
-</p>
+<div fxLayout="row wrap">
+  <mat-card class="venue" fxFlex="30%" fxFlex.xs="100%" *ngFor="let venue of venues">
+    <mat-card-content>
+      <img src="{{venue.image}}" height="350px" width="100%">
+      <div>
+        <h2>{{venue.stadium}}</h2>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
