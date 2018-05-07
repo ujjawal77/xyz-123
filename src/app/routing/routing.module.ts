@@ -5,7 +5,6 @@ import {HomeComponent} from '../home/home.component';
 import {TeamsAndPlayersComponent} from '../teams-and-players/teams-and-players.component';
 import {VenuesComponent} from '../venues/venues.component';
 
-
 const routes: Routes = [
   {path: '', redirectTo : '/schedule', pathMatch : 'full'},
   {path: 'schedule', component: HomeComponent},
