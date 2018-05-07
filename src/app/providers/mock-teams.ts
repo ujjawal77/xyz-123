@@ -300,15 +300,15 @@ export const TEAMS: any =
       players: [
         {
           "name": "Alisson",
-          "position": "GK"
+          "position": "Goalkeeper"
         },
         {
           "name": "Ederson",
-          "position": "GK"
+          "position": "Goalkeeper"
         },
         {
           "name": "Diego Alves",
-          "position": "GK"
+          "position": "Goalkeeper"
         },
         {
           "name": "Dani Alves",
@@ -690,17 +690,102 @@ export const TEAMS: any =
       logo: 'assets/imgs/teams/denmark.png',
       group: 'C',
       players: [
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
+        {
+          "name": "Kasper Schmeichel",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Frederik Rønnow",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Jonas Lössl",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Simon Kjær",
+          "position": "Defender"
+        },
+        {
+          "name": "Riza Durmisi",
+          "position": "Defender"
+        },
+        {
+          "name": "Peter Ankersen",
+          "position": "Defender"
+        },
+        {
+          "name": "Nicolai Boilesen",
+          "position": "Defender"
+        },
+        {
+          "name": "Mathias Jørgensen",
+          "position": "Defender"
+        },
+        {
+          "name": "Jens Stryger Larsen",
+          "position": "Defender"
+        },
+        {
+          "name": "Jonas Knudsen",
+          "position": "Defender"
+        },
+        {
+          "name": "Lasse Nielsen",
+          "position": "Defender"
+        },
+        {
+          "name": "William Kvist",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Christian Eriksen",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Lasse Schöne",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Thomas Delaney",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Pione Sisto",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Mike Jensen",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Lukas Lerager",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Nicklas Bendtner",
+          "position": "Forward"
+        },
+        {
+          "name": "Nicolai Jørgensen",
+          "position": "Forward"
+        },
+        {
+          "name": "Yussuf Poulsen",
+          "position": "Forward"
+        },
+        {
+          "name": "Andreas Cornelius",
+          "position": "Forward"
+        },
+        {
+          "name": "Martin Braithwaite",
+          "position": "Forward"
+        },
+        {
+          "name": "Viktor Fischer",
+          "position": "Forward"
+        }
       ]
     },
     {
@@ -709,17 +794,118 @@ export const TEAMS: any =
       logo: 'assets/imgs/teams/egypt.png',
       group: 'A',
       players: [
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
+        {
+          "name": "Essam El-Hadary",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Ahmed El-Shenawy",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Mohamed Awad",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Mohamed El-Shenawy",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Ahmed Fathy",
+          "position": "Defender"
+        },
+        {
+          "name": "Ahmed Elmohamady",
+          "position": "Defender"
+        },
+        {
+          "name": "Mohamed Abdel-Shafy",
+          "position": "Defender"
+        },
+        {
+          "name": "Ahmed Hegazi",
+          "position": "Defender"
+        },
+        {
+          "name": "Omar Gaber",
+          "position": "Defender"
+        },
+        {
+          "name": "Ali Gabr",
+          "position": "Defender"
+        },
+        {
+          "name": "Saad Samir",
+          "position": "Defender"
+        },
+        {
+          "name": "Ayman Ashraf",
+          "position": "Defender"
+        },
+        {
+          "name": "Mohamed El Neny",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Abdallah Said",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Shikabala",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Trézéguet",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Ramadan Sobhi",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Tarek Hamed",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Kahraba",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Hossam Ashour",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Amr Warda",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Moamen Zakaria",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Sam Morsy",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Hussein El Shahat",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Mohamed Magdy",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Mohamed Salah",
+          "position": "Forward"
+        },
+        {
+          "name": "Marwan Mohsen",
+          "position": "Forward"
+        },
+        {
+          "name": "Kouka",
+          "position": "Forward"
+        }
       ]
     },
     {
@@ -922,15 +1108,15 @@ export const TEAMS: any =
       players: [
         {
           "name": "Manuel Neuer",
-          "position": "GK"
+          "position": "Goalkeeper"
         },
         {
           "name": "Marc-André ter Stegen",
-          "position": "GK"
+          "position": "Goalkeeper"
         },
         {
           "name": "Bernd Leno",
-          "position": "GK"
+          "position": "Goalkeeper"
         },
         {
           "name": "Niklas Süle",
@@ -1016,17 +1202,122 @@ export const TEAMS: any =
       logo: 'assets/imgs/teams/iceland.png',
       group: 'D',
       players: [
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
+        {
+          "name": "Hannes Þór Halldórsson",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Ögmundur Kristinsson",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Ingvar Jónsson",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Rúnar Alex Rúnarsson",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Frederik Schram",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Birkir Már Sævarsson",
+          "position": "Defender"
+        },
+        {
+          "name": "Ragnar Sigurðsson",
+          "position": "Defender"
+        },
+        {
+          "name": "Kári Árnason",
+          "position": "Defender"
+        },
+        {
+          "name": "Ari Freyr Skúlason",
+          "position": "Defender"
+        },
+        {
+          "name": "Sverrir Ingi Ingason",
+          "position": "Defender"
+        },
+        {
+          "name": "Hörður Björgvin Magnússon",
+          "position": "Defender"
+        },
+        {
+          "name": "Jón Guðni Fjóluson",
+          "position": "Defender"
+        },
+        {
+          "name": "Hólmar Örn Eyjólfsson",
+          "position": "Defender"
+        },
+        {
+          "name": "Hjörtur Hermannsson",
+          "position": "Defender"
+        },
+        {
+          "name": "Aron Gunnarsson",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Birkir Bjarnason",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Jóhann Berg Guðmundsson",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Emil Hallfreðsson",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Rúrik Gíslason",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Theódór Elmar Bjarnason",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Ólafur Ingi Skúlason",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Arnór Ingvi Traustason",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Albert Guðmundsson",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Samúel Friðjónsson",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Kolbeinn Sigþórsson",
+          "position": "Forward"
+        },
+        {
+          "name": "Jón Daði Böðvarsson",
+          "position": "Forward"
+        },
+        {
+          "name": "Viðar Örn Kjartansson",
+          "position": "Forward"
+        },
+        {
+          "name": "Kjartan Finnbogason",
+          "position": "Forward"
+        },
+        {
+          "name": "Björn Bergmann Sigurðarson",
+          "position": "Forward"
+        }
       ]
     },
     {
@@ -1435,17 +1726,118 @@ export const TEAMS: any =
       logo: 'assets/imgs/teams/morocco.png',
       group: 'B',
       players: [
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
+        {
+          "name": "Munir Mohamedi",
+          "position": "Forward"
+        },
+        {
+          "name": "Yassine Bounou",
+          "position": "Forward"
+        },
+        {
+          "name": "Ahmed Reda Tagnaouti",
+          "position": "Forward"
+        },
+        {
+          "name": "Medhi Benatia",
+          "position": "Defender"
+        },
+        {
+          "name": "Nabil Dirar",
+          "position": "Defender"
+        },
+        {
+          "name": "Manuel da Costa",
+          "position": "Defender"
+        },
+        {
+          "name": "Romain Saïss",
+          "position": "Defender"
+        },
+        {
+          "name": "Hamza Mendyl",
+          "position": "Defender"
+        },
+        {
+          "name": "Badr Banoun",
+          "position": "Defender"
+        },
+        {
+          "name": "Achraf Hakimi",
+          "position": "Defender"
+        },
+        {
+          "name": "Oualid El Hajjam",
+          "position": "Defender"
+        },
+        {
+          "name": "Mbark Boussoufa",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Karim El Ahmadi",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Younès Belhanda",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Nordin Amrabat",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Fayçal Fajr",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Hakim Ziyech",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Youssef Aït Bennasser",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Sofiane Boufal",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Sofyan Amrabat",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Zakaria Labyad",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Amine Harit",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Yassin Ayoub",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Khalid Boutaïb",
+          "position": "Forward"
+        },
+        {
+          "name": "Aziz Bouhaddouz",
+          "position": "Forward"
+        },
+        {
+          "name": "Ayoub El Kaabi",
+          "position": "Forward"
+        },
+        {
+          "name": "Yacine Bammou",
+          "position": "Forward"
+        },
+        {
+          "name": "Walid Azaro",
+          "position": "Forward"
+        }
       ]
     },
     {
@@ -1554,21 +1946,194 @@ export const TEAMS: any =
       logo: 'assets/imgs/teams/panama.png',
       group: 'G',
       players: [
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
+        {
+          "name": "José Calderón",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Álex Rodríguez",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Richard Peralta",
+          "position": "Defender"
+        },
+        {
+          "name": "Chin Hormechea",
+          "position": "Defender"
+        },
+        {
+          "name": "Sergio Ortega",
+          "position": "Defender"
+        },
+        {
+          "name": "Francisco Palacios",
+          "position": "Defender"
+        },
+        {
+          "name": "Valentín Pimentel",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Josiel Núñez",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Leslie Heráldez",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Óscar Villarreal",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Rolando Botello",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Adalberto Carrasquilla",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Carlos Small",
+          "position": "Forward"
+        },
+        {
+          "name": "José Fajardo",
+          "position": "Forward"
+        },
+        {
+          "name": "Ronaldo Dinolis",
+          "position": "Forward"
+        },
+        {
+          "name": "Omar Browne",
+          "position": "Forward"
+        },
+        {
+          "name": "Jesús González",
+          "position": "Forward"
+        },
+        {
+          "name": "Alexis Palacios",
+          "position": "Forward"
+        }
       ]
     },
     {
       id: '21',
+      name: 'Peru',
+      logo: 'assets/imgs/teams/peru.png',
+      group: 'C',
+      players: [
+        {
+          "name": "Carlos Cáceda",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "José Carvallo",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Alejandro Duarte",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Alberto Rodríguez",
+          "position": "Defender"
+        },
+        {
+          "name": "Christian Ramos",
+          "position": "Defender"
+        },
+        {
+          "name": "Luis Advíncula",
+          "position": "Defender"
+        },
+        {
+          "name": "Aldo Corzo",
+          "position": "Defender"
+        },
+        {
+          "name": "Miguel Trauco",
+          "position": "Defender"
+        },
+        {
+          "name": "Miguel Araujo",
+          "position": "Defender"
+        },
+        {
+          "name": "Luis Abram",
+          "position": "Defender"
+        },
+        {
+          "name": "Nilson Loyola",
+          "position": "Defender"
+        },
+        {
+          "name": "Anderson Santamaría",
+          "position": "Defender"
+        },
+        {
+          "name": "Yoshimar Yotún",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Christian Cueva",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Paolo Hurtado",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Renato Tapia",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Edison Flores",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Cristian Benavente",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Andy Polo",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Pedro Aquino",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Sergio Peña",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Roberto Siucho",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Jefferson Farfán",
+          "position": "Forward"
+        },
+        {
+          "name": "André Carrillo",
+          "position": "Forward"
+        },
+        {
+          "name": "Raúl Ruidíaz",
+          "position": "Forward"
+        },
+        {
+          "name": "Beto da Silva",
+          "position": "Forward"
+        }
+      ]
+    },
+    {
+      id: '22',
       name: 'Portugal',
       logo: 'assets/imgs/teams/portugal.png',
       group: 'B',
@@ -1664,41 +2229,131 @@ export const TEAMS: any =
       ]
     },
     {
-      id: '22',
-      name: 'Peru',
-      logo: 'assets/imgs/teams/peru.png',
-      group: 'C',
-      players: [
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-      ]
-    },
-    {
       id: '23',
       name: 'Poland',
       logo: 'assets/imgs/teams/poland.png',
       group: 'H',
       players: [
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
+        {
+          "name": "Łukasz Fabiański",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Wojciech Szczęsny",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Łukasz Skorupski",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Bartosz Białkowski",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Łukasz Piszczek",
+          "position": "Defender"
+        },
+        {
+          "name": "Kamil Glik",
+          "position": "Defender"
+        },
+        {
+          "name": "Maciej Rybus",
+          "position": "Defender"
+        },
+        {
+          "name": "Artur Jędrzejczyk",
+          "position": "Defender"
+        },
+        {
+          "name": "Michał Pazdan",
+          "position": "Defender"
+        },
+        {
+          "name": "Thiago Cionek",
+          "position": "Defender"
+        },
+        {
+          "name": "Bartosz Bereszyński",
+          "position": "Defender"
+        },
+        {
+          "name": "Marcin Kamiński",
+          "position": "Defender"
+        },
+        {
+          "name": "Tomasz Kędziora",
+          "position": "Defender"
+        },
+        {
+          "name": "Paweł Jaroszyński",
+          "position": "Defender"
+        },
+        {
+          "name": "Kamil Grosicki",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Grzegorz Krychowiak",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Sławomir Peszko",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Piotr Zieliński",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Krzysztof Mączyński",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Karol Linetty",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Jacek Góralski",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Rafał Kurzawa",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Przemysław Frankowski",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Taras Romanczuk",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Damian Kądzior",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Robert Lewandowski",
+          "position": "Forward"
+        },
+        {
+          "name": "Arkadiusz Milik",
+          "position": "Forward"
+        },
+        {
+          "name": "Łukasz Teodorczyk",
+          "position": "Forward"
+        },
+        {
+          "name": "Jakub Świerczok",
+          "position": "Forward"
+        },
+        {
+          "name": "Dawid Kownacki",
+          "position": "Forward"
+        }
       ]
     },
     {
@@ -1803,17 +2458,118 @@ export const TEAMS: any =
       logo: 'assets/imgs/teams/saudi-arabia.png',
       group: 'A',
       players: [
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
+        {
+          "name": "Abdullah Al-Mayouf",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Yasser Al Mosailem",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Fawaz Al-Qarni",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Mohammed Al-Owais",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Mansoor Al-Harbi",
+          "position": "Defender"
+        },
+        {
+          "name": "Osama Hawsawi",
+          "position": "Defender"
+        },
+        {
+          "name": "Mohammed Jahfali",
+          "position": "Defender"
+        },
+        {
+          "name": "Omar Hawsawi",
+          "position": "Defender"
+        },
+        {
+          "name": "Mohammed Al-Breik",
+          "position": "Defender"
+        },
+        {
+          "name": "Saeed Al Mowalad",
+          "position": "Defender"
+        },
+        {
+          "name": "Yasser Al-Shahrani",
+          "position": "Defender"
+        },
+        {
+          "name": "Motaz Hawsawi",
+          "position": "Defender"
+        },
+        {
+          "name": "Ali Al Bulaihi",
+          "position": "Defender"
+        },
+        {
+          "name": "Salman Al-Faraj",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Hattan Bahebri",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Abdulmalek Al-Khaibri",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Abdullah Otayf",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Abdullah Al-Khaibari",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Housain Al-Mogahwi",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Taisir Al-Jassim",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Nawaf Al-Abed",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Mohammed Al-Kwikbi",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Ibrahim Ghaleb",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Mohamed Kanno",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Salem Al-Dawsari",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Haroune Camara",
+          "position": "Forward"
+        },
+        {
+          "name": "Mohammad Al-Sahlawi",
+          "position": "Forward"
+        },
+        {
+          "name": "Muhannad Assiri",
+          "position": "Forward"
+        }
       ]
     },
     {
@@ -1822,17 +2578,126 @@ export const TEAMS: any =
       logo: 'assets/imgs/teams/senegal.png',
       group: 'H',
       players: [
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
+        {
+          "name": "Khadim N'Diaye",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Abdoulaye Diallo",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Pape Seydou N'Diaye",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Alfred Gomis",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Lamine Gassama",
+          "position": "Defender"
+        },
+        {
+          "name": "Pape Souaré",
+          "position": "Defender"
+        },
+        {
+          "name": "Kalidou Koulibaly",
+          "position": "Defender"
+        },
+        {
+          "name": "Salif Sané",
+          "position": "Defender"
+        },
+        {
+          "name": "Papy Djilobodji",
+          "position": "Defender"
+        },
+        {
+          "name": "Moussa Wagué",
+          "position": "Defender"
+        },
+        {
+          "name": "Armand Traoré",
+          "position": "Defender"
+        },
+        {
+          "name": "Fallou Diagne",
+          "position": "Defender"
+        },
+        {
+          "name": "Youssouf Sabaly",
+          "position": "Defender"
+        },
+        {
+          "name": "Idrissa Gueye",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Cheikhou Kouyaté",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Henri Saivet",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Cheikh N'Doye",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Alfred N'Diaye",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Badou Ndiaye",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Assane Dioussé",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Sadio Mané",
+          "position": "Forward"
+        },
+        {
+          "name": "Moussa Sow",
+          "position": "Forward"
+        },
+        {
+          "name": "Mame Biram Diouf",
+          "position": "Forward"
+        },
+        {
+          "name": "Moussa Konaté",
+          "position": "Forward"
+        },
+        {
+          "name": "Keita Baldé",
+          "position": "Forward"
+        },
+        {
+          "name": "Ismaïla Sarr",
+          "position": "Forward"
+        },
+        {
+          "name": "Oumar Niasse",
+          "position": "Forward"
+        },
+        {
+          "name": "Diafra Sakho",
+          "position": "Forward"
+        },
+        {
+          "name": "M'Baye Niang",
+          "position": "Forward"
+        },
+        {
+          "name": "Santy Ngom",
+          "position": "Forward"
+        }
       ]
     },
     {
@@ -1841,17 +2706,98 @@ export const TEAMS: any =
       logo: 'assets/imgs/teams/serbia.png',
       group: 'E',
       players: [
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
+        {
+          "name": "Vladimir Stojković",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Predrag Rajković",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Marko Dmitrović",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Branislav Ivanović",
+          "position": "Defender"
+        },
+        {
+          "name": "Aleksandar Kolarov",
+          "position": "Defender"
+        },
+        {
+          "name": "Antonio Rukavina",
+          "position": "Defender"
+        },
+        {
+          "name": "Ivan Obradović",
+          "position": "Defender"
+        },
+        {
+          "name": "Matija Nastasić",
+          "position": "Defender"
+        },
+        {
+          "name": "Duško Tošić",
+          "position": "Defender"
+        },
+        {
+          "name": "Nikola Maksimović",
+          "position": "Defender"
+        },
+        {
+          "name": "Dušan Basta",
+          "position": "Defender"
+        },
+        {
+          "name": "Miloš Veljković",
+          "position": "Defender"
+        },
+        {
+          "name": "Dušan Tadić",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Nemanja Matić",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Adem Ljajić",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Luka Milivojević",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Filip Kostić",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Andrija Živković",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Mijat Gaćinović",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Marko Grujić",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Nemanja Maksimović",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Aleksandar Mitrović",
+          "position": "Forward"
+        },
+        {
+          "name": "Aleksandar Prijović",
+          "position": "Forward"
+        }
       ]
     },
     {
@@ -2152,17 +3098,118 @@ export const TEAMS: any =
       logo: 'assets/imgs/teams/tunisia.png',
       group: 'G',
       players: [
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
-        {name : 'Player Name yet to be announced'},
+        {
+          "name": "Aymen Mathlouthi",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Moez Ben Cherifia",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Farouk Ben Mustapha",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Mouez Hassen",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Ali Maâloul",
+          "position": "Defender"
+        },
+        {
+          "name": "Syam Ben Youssef",
+          "position": "Defender"
+        },
+        {
+          "name": "Khalil Chemmam",
+          "position": "Defender"
+        },
+        {
+          "name": "Yassine Meriah",
+          "position": "Defender"
+        },
+        {
+          "name": "Hamdi Nagguez",
+          "position": "Defender"
+        },
+        {
+          "name": "Rami Bedoui INJ",
+          "position": "Defender"
+        },
+        {
+          "name": "Oussama Haddadi",
+          "position": "Defender"
+        },
+        {
+          "name": "Dylan Bronn",
+          "position": "Defender"
+        },
+        {
+          "name": "Yohan Benalouane",
+          "position": "Defender"
+        },
+        {
+          "name": "Ferjani Sassi",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Wahbi Khazri",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Mohamed Amine Ben Amor",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Naïm Sliti",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Karim Aouadhi",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Ahmed Khalil",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Saîf-Eddine Khaoui",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Ellyes Skhiri",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Bassem Srarfi",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Ghazi Ayadi",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Youssef Msakni INJ",
+          "position": "Forward"
+        },
+        {
+          "name": "Fakhreddine Ben Youssef",
+          "position": "Forward"
+        },
+        {
+          "name": "Taha Yassine Khenissi",
+          "position": "Forward"
+        },
+        {
+          "name": "Anice Badri",
+          "position": "Forward"
+        },
+        {
+          "name": "Alaeddine Marzouki",
+          "position": "Forward"
+        }
       ]
     },
     {
