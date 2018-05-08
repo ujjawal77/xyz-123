@@ -1,5 +1,5 @@
-<div fxLayout="row wrap" *ngFor="let venue of venues;let i = index">
-    <mat-card class="venue" fxFlex="30%" fxFlex.xs="100%" *ngIf="i!=0">
+<div fxLayout="row wrap">
+    <mat-card class="venue" fxFlex="30%" fxFlex.xs="100%" *ngFor="let venue of venues;let i = index" [ngClass]="{'display-none': i==0}">
       <mat-card-content>
         <img src="{{venue.image}}" height="350px" width="100%">
         <div>
