@@ -57,21 +57,25 @@
             </p>
           </div>
           <div fxFlex="15%" fxFlexOffset="15%">
-            <div>
-              <mat-radio-group fxLayout="column">
-                <mat-radio-button value="1" fxFlex="50%" class="radio">{{fixture.team1}}</mat-radio-button>
-                <mat-radio-button value="2" fxFlex="50%" class="radio">{{fixture.team2}}</mat-radio-button>
+            <div *ngIf="canVote && !(userVotedList.indexOf(fixture.name) > -1) && votingResultAvailable">
+              <strong>Voting Ends in {{fixture.days}}D {{fixture.hours}}H {{fixture.minutes}}M {{fixture.seconds}}S</strong>
+              <mat-radio-group fxLayout="column" [(ngModel)]="teamVoted">
+                <mat-radio-button value="team1" fxFlex="50%" class="radio" checked="true">{{fixture.team1}}</mat-radio-button>
+                <mat-radio-button value="team2" fxFlex="50%" class="radio">{{fixture.team2}}</mat-radio-button>
               </mat-radio-group>
-              <button mat-raised-button color="accent" style="margin-left: 15px;">
+              <button mat-raised-button color="accent" style="margin-left: 15px;" (click)="vote(fixture)">
                 <strong>Vote Now</strong>
               </button>
+              <mat-progress-spinner *ngIf="!isVotingDone" mode="indeterminate" diameter="20" color="primary"></mat-progress-spinner>
             </div>
-            <div>
-              <!-- <p><strong>{{fixture.team1}} (40%)</strong></p>
-           <p><mat-progress-bar mode="determinate" value="40"></mat-progress-bar></p>
-           <p><strong>{{fixture.team2}} (60%)</strong></p>
-           <p><mat-progress-bar mode="determinate" value="60"></mat-progress-bar></p>-->
+            <div *ngIf="(userVotedList.indexOf(fixture.name) > -1) && votingResultAvailable">
+              <p><strong>{{fixture.team1}}: {{fixture.team1Votes}} votes, ( {{fixture.team1percent}} ) </strong></p>
+              <p><mat-progress-bar mode="determinate" value="{{fixture.team1progessValue}}"></mat-progress-bar></p>
+              <p><strong>{{fixture.team2}}: {{fixture.team2Votes}} votes, ( {{fixture.team2percent}} )</strong></p>
+              <p><mat-progress-bar mode="determinate" value="{{fixture.team2progessValue}}"></mat-progress-bar></p>
+              <p><strong>Total Voters {{fixture.totalVotes}}</strong></p>
             </div>
+            <mat-progress-spinner *ngIf="!votingResultAvailable" mode="indeterminate" diameter="30" color="accent"></mat-progress-spinner>
           </div>
         </div>
       </mat-card-content>

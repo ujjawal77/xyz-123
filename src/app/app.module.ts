@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { TeamsAndPlayersComponent } from './teams-and-players/teams-and-players.component';
 import { VenuesComponent } from './venues/venues.component';
+import {PredictionApiService} from "./providers/prediction-api.service";
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { VenuesComponent } from './venues/venues.component';
     FlexLayoutModule,
     RoutingModule
   ],
-  providers: [],
+  providers: [PredictionApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
