@@ -15,6 +15,7 @@ import { TeamsAndPlayersComponent } from './teams-and-players/teams-and-players.
 import { VenuesComponent } from './venues/venues.component';
 import {PredictionApiService} from "./providers/prediction-api.service";
 import { SigninComponent } from './signin/signin.component';
+import { ChallengeService } from './providers/challenge.service';
 
 
 // Configs
@@ -51,7 +52,8 @@ export function getAuthServiceConfigs() {
     {
     provide: AuthServiceConfig,
     useFactory: getAuthServiceConfigs
-    }
+    },
+    ChallengeService
   ],
   bootstrap: [AppComponent]
 })

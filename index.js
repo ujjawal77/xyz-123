@@ -13,6 +13,7 @@ var port = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname, '/dist/')));
 
 app.use('/api/voting', require('./xyz-123-api/voting'));
+app.use('/api/challenge', require('./xyz-123-api/challenge'));
 
 app.use('*', function (req, res, next) {
   res.sendFile('index.html', {root : path.join(__dirname, '/dist/')})
