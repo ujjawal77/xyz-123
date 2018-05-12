@@ -10,16 +10,16 @@ export class ChallengeService {
 
   // Get all users
   getUsers() {
-    return this.http.get(this.url + 'users');
+    return this.http.get(this.url);
   }
 
   // Post user
   postUser(body) {
-    return this.http.post(this.url + 'user', body);
+    return this.http.post(this.url, body);
   }
 
   // Post challenge
   postChallenge(body) {
-    return this.http.post(this.url + 'challenge', body);
+    return this.http.post(this.url + 'true', body);
   }
 }
