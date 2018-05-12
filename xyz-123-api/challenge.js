@@ -55,9 +55,8 @@ router.post('/', function (req, res, next) {
 
 // Post challenge
 router.post('/:challengeUser', function (req, res, next) {
-  console.log(req.body);
   if (JSON.parse(req.params.challengeUser)) {
-    // Update challenged users array
+    // Update challenged users array of both the users
     MongoClient.connect(url, function (err, db) {
       assert.equal(null, err);
       console.log("connected to server successfully");
@@ -67,19 +66,29 @@ router.post('/:challengeUser', function (req, res, next) {
           userId: req.body.userFrom.userId
         },
         {
-          $addToSet: {challengedUsers: [req.body.userTo.userId] }
+          $addToSet: {
+            challengedUsers: req.body.userTo.userId
+          }
         },
         function (err, docs) {
           assert.equal(err, null);
           console.log("Updated the following record", docs);
+          db.close();
         }
       );
+    });
+    MongoClient.connect(url, function (err, db) {
+      assert.equal(null, err);
+      console.log("connected to server successfully");
+      var collection = db.collection('users');
       collection.updateOne(
         {
           userId: req.body.userTo.userId
         },
         {
-          $addToSet: {challengedUsers: [req.body.userFrom.userId] }
+          $addToSet: {
+            challengedUsers: req.body.userFrom.userId
+          }
         },
         function (err, docs) {
           assert.equal(err, null);
