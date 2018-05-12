@@ -53,4 +53,62 @@ router.post('/', function (req, res, next) {
   });
 });
 
+// Post challenge
+router.post('/:challengeUser', function (req, res, next) {
+  console.log(req.body);
+  if (JSON.parse(req.params.challengeUser)) {
+    // Update challenged users array
+    MongoClient.connect(url, function (err, db) {
+      assert.equal(null, err);
+      console.log("connected to server successfully");
+      var collection = db.collection('users');
+      collection.updateOne(
+        {
+          userId: req.body.userFrom.userId
+        },
+        {
+          $addToSet: {challengedUsers: [req.body.userTo.userId] }
+        },
+        function (err, docs) {
+          assert.equal(err, null);
+          console.log("Updated the following record", docs);
+        }
+      );
+      collection.updateOne(
+        {
+          userId: req.body.userTo.userId
+        },
+        {
+          $addToSet: {challengedUsers: [req.body.userFrom.userId] }
+        },
+        function (err, docs) {
+          assert.equal(err, null);
+          console.log("Updated the following record", docs);
+          db.close();
+        }
+      );
+    });
+    // Insert challenge
+    MongoClient.connect(url, function (err, db) {
+      assert.equal(null, err);
+      console.log("connected to server successfully");
+      var collection = db.collection('challenges');
+      collection.insertOne(
+        {
+          match: req.body.match,
+          userFrom: req.body.userFrom,
+          userTo: req.body.userTo,
+          winningUserId: ''
+        },
+        function (err, docs) {
+          assert.equal(err, null);
+          console.log("Updated the following record", docs);
+          res.json(docs);
+          db.close();
+        }
+      );
+    });
+  }
+});
+
 module.exports = router;

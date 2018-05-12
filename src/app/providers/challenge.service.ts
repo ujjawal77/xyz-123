@@ -13,8 +13,13 @@ export class ChallengeService {
     return this.http.get(this.url);
   }
 
-  // Save a user
+  // Post user
   postUser(body) {
     return this.http.post(this.url, body);
+  }
+
+  // Post challenge
+  postChallenge(body) {
+    return this.http.post(this.url + 'true', body);
   }
 }
