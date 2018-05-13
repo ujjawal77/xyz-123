@@ -20,7 +20,7 @@ export class SigninComponent implements OnInit {
     this.socialAuthService.signIn(socialPlatformProvider).then((userData) => {
       console.log('sign in data : ' , userData);
       localStorage.setItem('profile', JSON.stringify(userData));
-      this.router.navigate(['/schedule']);
+      this.router.navigate(['/profile']);
       this.challengeService.postUser(userData).subscribe((result) => {
         console.log('saved user: ', result);
       }, (error) => {

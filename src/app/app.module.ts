@@ -16,6 +16,7 @@ import { VenuesComponent } from './venues/venues.component';
 import {PredictionApiService} from "./providers/prediction-api.service";
 import { SigninComponent } from './signin/signin.component';
 import { ChallengeService } from './providers/challenge.service';
+import { ProfileComponent } from './profile/profile.component';
 
 
 // Configs
@@ -35,7 +36,8 @@ export function getAuthServiceConfigs() {
     HomeComponent,
     TeamsAndPlayersComponent,
     VenuesComponent,
-    SigninComponent
+    SigninComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
