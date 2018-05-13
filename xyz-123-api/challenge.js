@@ -32,7 +32,7 @@ router.post('/', function (req, res, next) {
         userId: req.body.id
       },
       {
-        $set: {
+        $setOnInsert: {
           userId: req.body.id,
           name: req.body.name,
           email: req.body.email,
