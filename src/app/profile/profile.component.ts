@@ -27,11 +27,13 @@ export class ProfileComponent implements OnInit {
           matchesWon: 0,
           matchesLost: 0,
           matchesTied: 0,
+          matchesPlayed: 0,
           challenges: []
         };
         let matchesWon = 0;
         let matchesLost = 0;
         let matchesTied = 0;
+        let matchesPlayed = 0;
         this.challengeService.getUser(challengedUser).subscribe((user: any) => {
           score.challengedUser = user;
           this.challengeService.getChallengesForUser(challengedUser).subscribe((resp: any) => {
@@ -39,6 +41,7 @@ export class ProfileComponent implements OnInit {
             _.each(challenges, (challenge) => {
               if (this.profile.userId === challenge.userFrom.userId || this.profile.userId === challenge.userTo.userId) {
                 score.challenges.push(challenge);
+                matchesPlayed += 1;
                 if (challenge.isTied) {
                   matchesTied += 1;
                 } else if (challenge.winningUserId === this.profile.userId) {
@@ -51,6 +54,7 @@ export class ProfileComponent implements OnInit {
             score.matchesWon = matchesWon;
             score.matchesLost = matchesLost;
             score.matchesTied = matchesTied;
+            score.matchesPlayed = matchesPlayed;
             this.scores.push(score);
           });
         });
