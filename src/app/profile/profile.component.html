@@ -1,3 +1,59 @@
-<p>
-  profile works!
-</p>
+<div fxLayout="row">
+  <mat-card fxFlex="70%">
+    <mat-card-content fxLayout="column">
+      <div fxFlex="100%" class="profile" >
+        <img src="{{profile.image}}" height="160px">
+        <h3 style="margin: 2px;">{{profile.name}}</h3>
+        <p style="margin: 0px;">
+          <strong>{{profile.email}}</strong>
+        </p>
+      </div>
+      <div>
+        <mat-tab-group>
+          <mat-tab label="Score Card">
+            <h1>Some tab content</h1>
+            <p>...</p>
+          </mat-tab>
+          <mat-tab label="Active Challenges">
+            <h1>Some more tab content</h1>
+            <p>...</p>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card fxFlex="30%" class="challenges">
+    <mat-card-header>
+      <h3>Challenge a friend</h3>
+    </mat-card-header>
+    <hr>
+    <mat-card-content>
+      <div *ngFor="let user of users">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <img mat-card-avatar src="{{user.image}}">
+              <h3>
+                <strong>{{user.name}}</strong>
+              </h3>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div fxLayout="column">
+            <mat-form-field>
+              <mat-select placeholder="Match" [(ngModel)]="selectedTeam" (change)="onTeamSelect()">
+                <mat-option *ngFor="let schedule of schedules" [value]="schedule">
+                  {{schedule.team1}} vs {{schedule.team2}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div>
+              <button mat-raised-button color="accent" style="float: right">
+                <strong>Challenge</strong>
+              </button>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

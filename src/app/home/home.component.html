@@ -59,7 +59,7 @@
           <div fxFlex="15%" fxFlexOffset="15%">
             <div *ngIf="canVote && !(userVotedList.indexOf(fixture.name) > -1) && votingResultAvailable">
               <strong>Voting Ends in {{fixture.days}}D {{fixture.hours}}H {{fixture.minutes}}M {{fixture.seconds}}S</strong>
-              <mat-radio-group fxLayout="column" [(ngModel)]="teamVoted">
+              <mat-radio-group fxLayout="column" [(ngModel)]="fixture.name">
                 <mat-radio-button value="team1" fxFlex="50%" class="radio" checked="true">{{fixture.team1}}</mat-radio-button>
                 <mat-radio-button value="team2" fxFlex="50%" class="radio">{{fixture.team2}}</mat-radio-button>
               </mat-radio-group>
