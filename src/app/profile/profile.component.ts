@@ -13,6 +13,7 @@ export class ProfileComponent implements OnInit {
   profile: any;
   users: any;
   challenges: any;
+  scores: any;
 
   constructor(private challengeService: ChallengeService) { }
 
@@ -20,6 +21,43 @@ export class ProfileComponent implements OnInit {
     const profile = JSON.parse(localStorage.getItem('profile'));
     this.challengeService.getUser(profile.id).subscribe((result: any) => {
       this.profile = result;
+      _.each(this.profile.challengedUsers, (challengedUser) => {
+        let score = {
+          challengedUser: {},
+          matchesWon: 0,
+          matchesLost: 0,
+          matchesTied: 0,
+          challenges: []
+        };
+        let matchesWon = 0;
+        let matchesLost = 0;
+        let matchesTied = 0;
+        this.challengeService.getUser(challengedUser).subscribe((user: any) => {
+          score.challengedUser = user;
+          this.challengeService.getChallengesForUser(challengedUser).subscribe((resp: any) => {
+            const challenges = resp;
+            _.each(challenges, (challenge) => {
+              if (this.profile.userId === challenge.userFrom.userId || this.profile.userId === challenge.userTo.userId) {
+                score.challenges.push(challenge);
+                if (challenge.isTied) {
+                  matchesTied += 1;
+                } else if (challenge.winningUserId === this.profile.userId) {
+                  matchesWon += 1;
+                } else if (challenge.winningUserId === challengedUser) {
+                  matchesLost += 1;
+                }
+              }
+            });
+            score.matchesWon = matchesWon;
+            score.matchesLost = matchesLost;
+            score.matchesTied = matchesTied;
+            console.log('score', score);
+            console.log('scores', this.scores);
+            this.scores.push(score);
+          });
+        });
+      });
+      console.log(this.scores);
     }, (err) => {
       console.error(err);
     });
