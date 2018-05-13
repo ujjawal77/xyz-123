@@ -185,5 +185,45 @@ router.put('/challenge', function (req, res, next) {
     );
   });
 });
+// Put challenge vote
+router.put('/vote', function (req, res, next) {
+  MongoClient.connect(url, function (err, db) {
+    assert.equal(null, err);
+    console.log("connected to server successfully");
+    var collection = db.collection('challenges');
+    collection.updateOne(
+      {
+        _id: new ObjectID(req.body.challengeId),
+        'userFrom.userId': req.body.userId
+      },
+      {
+        $set: {
+          'userFrom.votedTeam': req.body.votedTeam
+        }
+      },
+      function (err, docs) {
+        assert.equal(err, null);
+        console.log("Updated the following record", docs);
+        collection.updateOne(
+          {
+            _id: new ObjectID(req.body.challengeId),
+            'userTo.userId': req.body.userId
+          },
+          {
+            $set: {
+              'userTo.votedTeam': req.body.votedTeam
+            }
+          },
+          function (err, docs) {
+            assert.equal(err, null);
+            console.log("Updated the following record", docs);
+            res.json(docs);
+            db.close();
+          }
+        );
+      }
+    );
+  });
+});
 
 module.exports = router;

@@ -104,4 +104,12 @@ export class ProfileComponent implements OnInit {
       console.error(err);
     });
   }
+
+  public voteInChallenge(voteData) {
+    this.challengeService.updateChallengeVote(voteData).subscribe((result) => {
+      console.log(result);
+    }, (err) => {
+      console.error(err);
+    });
+  }
 }

@@ -37,4 +37,9 @@ export class ChallengeService {
   updateChallenge(body) {
     return this.http.put(this.url + 'challenge', body);
   }
+
+  // Update challenge voted team
+  updateChallengeVote(body) {
+    return this.http.put(this.url + 'vote', body);
+  }
 }

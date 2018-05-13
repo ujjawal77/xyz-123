@@ -42,10 +42,10 @@
                   </div>
                   <div fxFlex="50%" class="teamVote">
                     <mat-radio-group fxLayout="column" [(ngModel)]="teamVoted">
-                      <mat-radio-button value="team1" fxFlex="50%" class="radio" checked="true">{{challenge.match.team1}}</mat-radio-button>
-                      <mat-radio-button value="team2" fxFlex="50%" class="radio">{{challenge.match.team2}}</mat-radio-button>
+                      <mat-radio-button value="{{challenge.match.team1}}" fxFlex="50%" class="radio" checked="true">{{challenge.match.team1}}</mat-radio-button>
+                      <mat-radio-button value="{{challenge.match.team2}}" fxFlex="50%" class="radio">{{challenge.match.team2}}</mat-radio-button>
                     </mat-radio-group>
-                    <button mat-raised-button color="accent" style="margin-left: 15px;" (click)="vote(challenge.match)">
+                    <button (click)="voteInChallenge({challengeId: challenge._id, userId: profile.userId, votedTeam: teamVoted})" mat-raised-button color="accent" style="margin-left: 15px;">
                       <strong>Vote Now</strong>
                     </button>
                   </div>
