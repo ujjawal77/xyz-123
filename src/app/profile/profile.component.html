@@ -1,4 +1,4 @@
-<div fxLayout="row" *ngIf="profile">
+<div fxLayout="row" *ngIf="profile && scores">
   <mat-card fxFlex="70%">
     <mat-card-content fxLayout="column">
       <div fxFlex="100%" class="profile" >
@@ -8,50 +8,91 @@
           <strong>{{profile.email}}</strong>
         </p>
       </div>
-      <div class="tab">
-        <mat-tab-group>
-          <mat-tab label="Scorecard">
-            <h1>Some tab content</h1>
-            <p>...</p>
-          </mat-tab>
-          <mat-tab label="Active Challenges">
-            <div>
-            <mat-accordion>
-              <mat-expansion-panel *ngFor="let challenge of challenges">
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    <img mat-card-avatar src="{{challenge.userFrom.image}}">
-                    <h3>
-                      <strong>{{challenge.userFrom.name}}</strong>
-                    </h3>
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div fxLayout="row">
-                  <div fxFlex="50%" fxLayout="row">
-                    <div fxFlex="40%" class="team">
-                      <img src="{{challenge.match.team1logo}}">
-                      <p>{{challenge.match.team1}}</p>
-                    </div>
-                    <div fxFlex="20%" class="against">
-                      VS
-                    </div>
-                    <div fxFlex="40%" class="team">
-                      <img src="{{challenge.match.team2logo}}">
-                      <p>{{challenge.match.team2}}</p>
-                    </div>
+      <div>
+        <mat-tab-group class="tab">
+          <mat-tab label="Opponents">
+            <div *ngIf="scores.length > 0">
+              <div *ngFor="let score of scores">
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      <img mat-card-avatar src="{{score.challengedUser.image}}">
+                      <h3>
+                        <strong>{{score.challengedUser.name}}</strong>
+                      </h3>
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Matches Played</th>
+                          <th>Matches Lost</th>
+                          <th>Matches Tied</th>
+                          <th>Matches Won</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>{{score.matchesPlayed}}</td>
+                          <td>{{score.matchesLost}}</td>
+                          <td>{{score.matchesTied}}</td>
+                          <td>{{score.matchesWon}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <div fxFlex="50%" class="teamVote">
-                    <mat-radio-group fxLayout="column" [(ngModel)]="teamVoted">
-                      <mat-radio-button value="{{challenge.match.team1}}" fxFlex="50%" class="radio" checked="true">{{challenge.match.team1}}</mat-radio-button>
-                      <mat-radio-button value="{{challenge.match.team2}}" fxFlex="50%" class="radio">{{challenge.match.team2}}</mat-radio-button>
-                    </mat-radio-group>
-                    <button (click)="voteInChallenge({challengeId: challenge._id, userId: profile.userId, votedTeam: teamVoted})" mat-raised-button color="accent" style="margin-left: 15px;">
-                      <strong>Vote Now</strong>
-                    </button>
+                </mat-expansion-panel>
+              </div>
+            </div>
+            <div *ngIf="scores.length == 0">
+              <mat-card class="error">
+                <h3>No Opponents Found.</h3>
+              </mat-card>
+            </div>
+          </mat-tab>
+          <mat-tab label="Challenges">
+            <div *ngIf="challenges.length > 0">
+            <mat-expansion-panel *ngFor="let challenge of challenges">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <img mat-card-avatar src="{{challenge.userFrom.image}}">
+                  <h3>
+                    <strong>{{challenge.userFrom.name}}</strong>
+                  </h3>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div fxLayout="row">
+                <div fxFlex="50%" fxLayout="row">
+                  <div fxFlex="40%" class="team">
+                    <img src="{{challenge.match.team1logo}}">
+                    <p>{{challenge.match.team1}}</p>
+                  </div>
+                  <div fxFlex="20%" class="against">
+                    VS
+                  </div>
+                  <div fxFlex="40%" class="team">
+                    <img src="{{challenge.match.team2logo}}">
+                    <p>{{challenge.match.team2}}</p>
                   </div>
                 </div>
-              </mat-expansion-panel>
-            </mat-accordion>
+                <div fxFlex="50%" class="teamVote">
+                  <mat-radio-group fxLayout="column" [(ngModel)]="teamVoted">
+                    <mat-radio-button value="{{challenge.match.team1}}" fxFlex="50%" class="radio" checked="true">{{challenge.match.team1}}</mat-radio-button>
+                    <mat-radio-button value="{{challenge.match.team2}}" fxFlex="50%" class="radio">{{challenge.match.team2}}</mat-radio-button>
+                  </mat-radio-group>
+                  <button (click)="voteInChallenge({challengeId: challenge._id, userId: profile.userId, votedTeam: teamVoted})" mat-raised-button color="accent" style="margin-left: 15px;">
+                    <strong *ngIf="!hasVoted">Vote Now</strong>
+                    <strong *ngIf="hasVoted">Voting...</strong>
+                  </button>
+                </div>
+              </div>
+            </mat-expansion-panel>
+            </div>
+            <div *ngIf="challenges.length == 0">
+              <mat-card class="error">
+                <h3>No Challenges Found.</h3>
+              </mat-card>
             </div>
           </mat-tab>
         </mat-tab-group>
@@ -60,10 +101,11 @@
   </mat-card>
   <mat-card fxFlex="30%" class="challenges">
     <mat-card-header>
-      <h3>Challenge</h3>
+      <h3>Challenge Users</h3>
     </mat-card-header>
     <hr>
     <mat-card-content>
+      <div *ngIf="users.length > 0">
       <div *ngFor="let user of users">
         <mat-expansion-panel *ngIf="user.userId != profile.userId">
           <mat-expansion-panel-header>
@@ -84,11 +126,18 @@
             </mat-form-field>
             <div>
               <button (click)="challenge({userFrom: profile, userTo: user, match: selectedTeam})" mat-raised-button color="accent" style="float: right">
-                <strong>Challenge</strong>
+                <strong *ngIf="!challengeLoader">Challenge</strong>
+                <strong *ngIf="challengeLoader">Challenging...</strong>
               </button>
             </div>
           </div>
         </mat-expansion-panel>
+      </div>
+      </div>
+      <div *ngIf="users.length == 0">
+        <mat-card class="error">
+          <h3>No Users Found.</h3>
+        </mat-card>
       </div>
     </mat-card-content>
   </mat-card>

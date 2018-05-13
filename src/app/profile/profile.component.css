@@ -36,7 +36,7 @@ mat-card.challenges mat-card-content {
 }
 
 .tab {
-  max-height: 300px!important;
+  height: 300px!important;
   overflow-y: scroll;
 }
 
@@ -60,4 +60,49 @@ mat-card.challenges mat-card-content {
   font-size: 30px;
   margin-top: 50px;
   text-align: center;
+}
+
+table {
+  border: 0px;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+thead tr th{
+  font-size:14px;
+  font-weight:600;
+  font-family:lato,sans-serif;
+  text-align:left;
+  padding:10px 5px;
+  text-transform:uppercase;
+  color:#444;
+  text-align:center;
+}
+
+thead tr th:first-child, tbody tr td:first-child{
+  padding:10px 0;
+}
+
+tbody tr {
+  border-top: 1px solid #f0f0f0;
+}
+
+td {
+  font-size:14px;
+  font-weight:400;
+  padding:10px 5px;
+  font-family:lato,sans-serif;
+  text-align:center;
+  color:#444;
+}
+
+.mat-tab-body-wrapper {
+  height: 300px!important;
+  overflow-y: scroll!important;
+}
+
+mat-card.error {
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.05) !important;
 }

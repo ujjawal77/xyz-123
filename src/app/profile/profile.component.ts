@@ -14,6 +14,8 @@ export class ProfileComponent implements OnInit {
   users: any = [];
   challenges: any = [];
   scores: any = [];
+  challengeLoader = false;
+  hasVoted = false;
 
   constructor(private challengeService: ChallengeService) { }
 
@@ -59,6 +61,7 @@ export class ProfileComponent implements OnInit {
           });
         });
       });
+      console.log(this.scores);
     }, (err) => {
       console.error(err);
     });
@@ -103,15 +106,19 @@ export class ProfileComponent implements OnInit {
   }
 
   public challenge(challengeData) {
+    this.challengeLoader = true;
     this.challengeService.postChallenge(challengeData).subscribe((result) => {
+      this.challengeLoader = false;
     }, (err) => {
       console.error(err);
     });
   }
 
   public voteInChallenge(voteData) {
+    this.hasVoted = true;
     this.challengeService.updateChallengeVote(voteData).subscribe((result) => {
       console.log(result);
+      this.hasVoted = false;
     }, (err) => {
       console.error(err);
     });

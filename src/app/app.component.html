@@ -19,6 +19,9 @@
   <button mat-button [routerLink]="['/venues']">
     <strong>Venues</strong>
   </button>
+  <button mat-button (click)="socialSignIn()">
+    <i class="fab fa-google-plus-g fa-lg"></i> <strong>SignIn</strong>
+  </button>
 </mat-toolbar>
 <div class="main-content">
   <router-outlet></router-outlet>
