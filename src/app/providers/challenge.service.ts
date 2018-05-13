@@ -32,4 +32,9 @@ export class ChallengeService {
   postChallenge(body) {
     return this.http.post(this.url + 'challenge', body);
   }
+
+  // Update challenge
+  updateChallenge(body) {
+    return this.http.put(this.url + 'challenge', body);
+  }
 }

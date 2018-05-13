@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChallengeService } from '../providers/challenge.service';
 import {SCHEDULE} from '../providers/mock-schedule';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-profile',
@@ -29,7 +30,34 @@ export class ProfileComponent implements OnInit {
     });
     this.challengeService.getChallengesForUser(profile.id).subscribe((result: any) => {
       this.challenges = result;
-      console.log('challenges: ', result);
+      // Logic to update challenges won/lost
+      _.each(this.challenges, (challenge) => {
+        if (challenge.userFrom.votedTeam && challenge.userTo.votedTeam && !challenge.winningUserId && !challenge.isTie) {
+          _.each(this.schedules, (schedule) => {
+            if (schedule.winningTeam && challenge.match.id === schedule.id) {
+              let isTie = false;
+              let winningUserId;
+              if (schedule.winningTeam === challenge.userFrom.votedTeam && schedule.winningTeam === challenge.userTo.votedTeam) {
+                isTie = true;
+              } else if (schedule.winningTeam === challenge.userFrom.votedTeam) {
+                winningUserId = challenge.userFrom.userId;
+              } else if (schedule.winningTeam === challenge.userTo.votedTeam) {
+                winningUserId = challenge.userTo.userId;
+              }
+              const body = {
+                challengeId: challenge._id,
+                winningUserId: winningUserId,
+                isTie: isTie
+              };
+              this.challengeService.updateChallenge(body).subscribe((resp: any) => {
+                console.log(resp);
+              }, (err) => {
+                console.error(err);
+              });
+            }
+          });
+        }
+      });
     }, (err) => {
       console.error(err);
     });
