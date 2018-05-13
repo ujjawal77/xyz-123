@@ -31,7 +31,33 @@ mat-expansion-panel {
 }
 
 mat-card.challenges mat-card-content {
-  max-height: 400px;
+  max-height: 400px!important;
   overflow-y: scroll;
 }
 
+.tab {
+  max-height: 300px!important;
+  overflow-y: scroll;
+}
+
+.team img {
+  height: 80px;
+}
+
+.team {
+  text-align: center;
+}
+
+.teamVote {
+  text-align: center;
+}
+
+.teamVote mat-radio-button{
+  margin: 10px;
+}
+
+.against {
+  font-size: 30px;
+  margin-top: 50px;
+  text-align: center;
+}

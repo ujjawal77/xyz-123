@@ -8,15 +8,51 @@
           <strong>{{profile.email}}</strong>
         </p>
       </div>
-      <div>
+      <div class="tab">
         <mat-tab-group>
           <mat-tab label="Scorecard">
             <h1>Some tab content</h1>
             <p>...</p>
           </mat-tab>
           <mat-tab label="Active Challenges">
-            <h1>Some more tab content</h1>
-            <p>...</p>
+            <div>
+            <mat-accordion>
+              <mat-expansion-panel *ngFor="let challenge of challenges">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <img mat-card-avatar src="{{challenge.userFrom.image}}">
+                    <h3>
+                      <strong>{{challenge.userFrom.name}}</strong>
+                    </h3>
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div fxLayout="row">
+                  <div fxFlex="50%" fxLayout="row">
+                    <div fxFlex="40%" class="team">
+                      <img src="{{challenge.match.team1logo}}">
+                      <p>{{challenge.match.team1}}</p>
+                    </div>
+                    <div fxFlex="20%" class="against">
+                      VS
+                    </div>
+                    <div fxFlex="40%" class="team">
+                      <img src="{{challenge.match.team2logo}}">
+                      <p>{{challenge.match.team2}}</p>
+                    </div>
+                  </div>
+                  <div fxFlex="50%" class="teamVote">
+                    <mat-radio-group fxLayout="column" [(ngModel)]="teamVoted">
+                      <mat-radio-button value="team1" fxFlex="50%" class="radio" checked="true">{{challenge.match.team1}}</mat-radio-button>
+                      <mat-radio-button value="team2" fxFlex="50%" class="radio">{{challenge.match.team2}}</mat-radio-button>
+                    </mat-radio-group>
+                    <button mat-raised-button color="accent" style="margin-left: 15px;" (click)="vote(challenge.match)">
+                      <strong>Vote Now</strong>
+                    </button>
+                  </div>
+                </div>
+              </mat-expansion-panel>
+            </mat-accordion>
+            </div>
           </mat-tab>
         </mat-tab-group>
       </div>
