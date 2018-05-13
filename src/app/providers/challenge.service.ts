@@ -13,6 +13,11 @@ export class ChallengeService {
     return this.http.get(this.url + 'users');
   }
 
+  // Get user
+  getUser(userId) {
+    return this.http.get(this.url + userId);
+  }
+
   // Post user
   postUser(body) {
     return this.http.post(this.url + 'user', body);

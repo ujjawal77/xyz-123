@@ -23,6 +23,25 @@ router.get('/:endpoint', function (req, res, next) {
   }
 });
 
+// Get user
+router.get('/users/:userId', function (req, res, next) {
+    MongoClient.connect(url, function (err, db) {
+      assert.equal(null, err);
+      console.log("connected to server successfully");
+      var collection = db.collection('users');
+      collection.findOne(
+        {
+          userId: req.params.userId
+        },
+        function (err, docs) {
+          assert.equal(err, null);
+          res.json(docs);
+          db.close();
+        }
+      );
+    });
+});
+
 // Post user/challenge
 router.post('/:endpoint', function (req, res, next) {
   if (req.params.endpoint === 'user') {
