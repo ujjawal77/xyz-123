@@ -1,4 +1,4 @@
-<div fxLayout="row">
+<div fxLayout="row" *ngIf="profile">
   <mat-card fxFlex="70%">
     <mat-card-content fxLayout="column">
       <div fxFlex="100%" class="profile" >
@@ -10,7 +10,7 @@
       </div>
       <div>
         <mat-tab-group>
-          <mat-tab label="Score Card">
+          <mat-tab label="Scorecard">
             <h1>Some tab content</h1>
             <p>...</p>
           </mat-tab>
@@ -24,12 +24,12 @@
   </mat-card>
   <mat-card fxFlex="30%" class="challenges">
     <mat-card-header>
-      <h3>Challenge a friend</h3>
+      <h3>Challenge</h3>
     </mat-card-header>
     <hr>
     <mat-card-content>
       <div *ngFor="let user of users">
-        <mat-expansion-panel>
+        <mat-expansion-panel *ngIf="user.userId != profile.userId">
           <mat-expansion-panel-header>
             <mat-panel-title>
               <img mat-card-avatar src="{{user.image}}">
@@ -40,14 +40,14 @@
           </mat-expansion-panel-header>
           <div fxLayout="column">
             <mat-form-field>
-              <mat-select placeholder="Match" [(ngModel)]="selectedTeam" (change)="onTeamSelect()">
+              <mat-select placeholder="Match" [(ngModel)]="selectedTeam">
                 <mat-option *ngFor="let schedule of schedules" [value]="schedule">
                   {{schedule.team1}} vs {{schedule.team2}}
                 </mat-option>
               </mat-select>
             </mat-form-field>
             <div>
-              <button mat-raised-button color="accent" style="float: right">
+              <button (click)="challenge({userFrom: profile, userTo: user, match: selectedTeam})" mat-raised-button color="accent" style="float: right">
                 <strong>Challenge</strong>
               </button>
             </div>

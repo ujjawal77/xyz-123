@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChallengeService } from '../providers/challenge.service';
-import {SCHEDULE} from "../providers/mock-schedule";
+import {SCHEDULE} from '../providers/mock-schedule';
 
 @Component({
   selector: 'app-profile',
@@ -15,11 +15,24 @@ export class ProfileComponent implements OnInit {
   constructor(private challengeService: ChallengeService) { }
 
   ngOnInit() {
-    this.profile = JSON.parse(localStorage.getItem('profile'));
+    const profile = JSON.parse(localStorage.getItem('profile'));
+    this.challengeService.getUser(profile.id).subscribe((result: any) => {
+      this.profile = result;
+    }, (err) => {
+      console.error(err);
+    });
     this.challengeService.getUsers().subscribe((result: any) => {
       this.users = result;
-      console.log(result);
+    }, (err) => {
+      console.error(err);
     });
   }
 
+  public challenge(challengeData) {
+    this.challengeService.postChallenge(challengeData).subscribe((result) => {
+      console.log('saved challenge: ', result);
+    }, (err) => {
+      console.error(err);
+    });
+  }
 }
