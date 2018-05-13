@@ -10,10 +10,10 @@ import * as _ from 'lodash';
 })
 export class ProfileComponent implements OnInit {
   schedules: any = SCHEDULE;
-  profile: any;
-  users: any;
-  challenges: any;
-  scores: any;
+  profile: any = {};
+  users: any = [];
+  challenges: any = [];
+  scores: any = [];
 
   constructor(private challengeService: ChallengeService) { }
 
@@ -51,13 +51,10 @@ export class ProfileComponent implements OnInit {
             score.matchesWon = matchesWon;
             score.matchesLost = matchesLost;
             score.matchesTied = matchesTied;
-            console.log('score', score);
-            console.log('scores', this.scores);
             this.scores.push(score);
           });
         });
       });
-      console.log(this.scores);
     }, (err) => {
       console.error(err);
     });
