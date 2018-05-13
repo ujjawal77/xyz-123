@@ -8,9 +8,14 @@ export class ChallengeService {
 
   constructor(private http: HttpClient) { }
 
-  // Get all users
+  // Get users
   getUsers() {
     return this.http.get(this.url + 'users');
+  }
+
+  // Get challenges for user
+  getChallengesForUser(userId) {
+    return this.http.get(this.url + 'challenges/' + userId);
   }
 
   // Get user

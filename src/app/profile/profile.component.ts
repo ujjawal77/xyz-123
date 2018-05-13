@@ -11,6 +11,7 @@ export class ProfileComponent implements OnInit {
   schedules: any = SCHEDULE;
   profile: any;
   users: any;
+  challenges: any;
 
   constructor(private challengeService: ChallengeService) { }
 
@@ -26,11 +27,16 @@ export class ProfileComponent implements OnInit {
     }, (err) => {
       console.error(err);
     });
+    this.challengeService.getChallengesForUser(profile.id).subscribe((result: any) => {
+      this.challenges = result;
+      console.log('challenges: ', result);
+    }, (err) => {
+      console.error(err);
+    });
   }
 
   public challenge(challengeData) {
     this.challengeService.postChallenge(challengeData).subscribe((result) => {
-      console.log('saved challenge: ', result);
     }, (err) => {
       console.error(err);
     });

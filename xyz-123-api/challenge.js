@@ -21,6 +21,29 @@ router.get('/users', function (req, res, next) {
   });
 });
 
+// Get challenges for a user
+router.get('/challenges/:userId', function (req, res, next) {
+  MongoClient.connect(url, function (err, db) {
+    assert.equal(null, err);
+    console.log("connected to server successfully");
+    var collection = db.collection('challenges');
+    collection.find({
+      $or: [
+        {
+          'userFrom.userId': req.params.userId
+        },
+        {
+          'userTo.userId': req.params.userId
+        }
+      ]
+    }).toArray(function (err, docs) {
+      assert.equal(err, null);
+      res.json(docs);
+      db.close();
+    });
+  });
+});
+
 // Get user
 router.get('/user/:userId', function (req, res, next) {
     MongoClient.connect(url, function (err, db) {
